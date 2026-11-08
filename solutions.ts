@@ -36,6 +36,7 @@ interface Course {
     isPublished: boolean;
 }
 
+
 const getPopularCourses = (array:Course[], minStudents:number):Course[] =>{
     const popularCourses:Course[] = [];
     for (let i = 0; i < array.length; i++){
@@ -45,4 +46,15 @@ const getPopularCourses = (array:Course[], minStudents:number):Course[] =>{
         }
     }
     return popularCourses;
+}
+
+const validateAgeAsync = async (age: number): Promise<string> => {
+    
+        if(age >= 18){
+            await new Promise(resolve => setTimeout(resolve, 1000));
+            return 'Access Granted';
+        }
+        else{
+            throw new Error('Access Denied: Must be 18 or older');
+        }   
 }
