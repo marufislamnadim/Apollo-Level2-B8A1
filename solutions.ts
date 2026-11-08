@@ -29,3 +29,20 @@ const concatenateArrays = <T>(...arrays: T[][]): T[] => {
     }
     return finalArray;
 }
+
+interface Course {
+    title: string;
+    students: number;
+    isPublished: boolean;
+}
+
+const getPopularCourses = (array:Course[], minStudents:number):Course[] =>{
+    const popularCourses:Course[] = [];
+    for (let i = 0; i < array.length; i++){
+        const currentCourse = array[i]; 
+        if (currentCourse.students >=minStudents && currentCourse.isPublished){
+            popularCourses.push(currentCourse);
+        }
+    }
+    return popularCourses;
+}
