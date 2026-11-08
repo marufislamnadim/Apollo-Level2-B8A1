@@ -13,3 +13,11 @@ const processInput =(value:number | string | boolean):string | number=>{
         } else return 'Inactive';
     }
 }
+
+const formatCoordinate = ( tupleArray: readonly [latitude: number, longitude: number, locationName: string]):string=>{
+    const [latitude, longitude, locationName] = tupleArray;
+    return `Location: ${locationName} (${latitude}, ${longitude})`;
+}
+
+
+
