@@ -19,5 +19,13 @@ const formatCoordinate = ( tupleArray: readonly [latitude: number, longitude: nu
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 }
 
-
-
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+    let finalArray:T[] = [];    
+    for (let i = 0; i < arrays.length; i++) {
+        const currentArray = arrays[i];
+        for (let j = 0; j < currentArray.length; j++) {
+            finalArray.push(currentArray[j]);
+        }
+    }
+    return finalArray;
+}
