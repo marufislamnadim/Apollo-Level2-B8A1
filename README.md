@@ -20,7 +20,7 @@ This assignment is focused to verifying knowledge of TypeScript with OOP, partic
 #### Step 5: now debug and testing along with error correction and edge case detection
 
 ## Blogs 
-- As part of the assignment I've wrote two bloogs - 
-At fist, Blog about Explain how Access Modifiers (public, private, protected, and readonly) work in TypeScript OOP with examples. Link: [ access-modifier-OOP.md](./access-modifier-OOP.md) 
+As part of the assignment I've wrote two following blogs 
+- At fist, Blog about Explain how Access Modifiers (public, private, protected, and readonly) work in TypeScript OOP with examples. Link: [ access-modifier-OOP.md](./access-modifier-OOP.md) 
 
-Secondly, Blog about Provide a practical example of combining Union (|) and Intersection (&) types in TypeScript. Link: [ example-union-intersection.md](./example-union-intersection.md)
+- Secondly, Blog about Provide a practical example of combining Union (|) and Intersection (&) types in TypeScript. Link: [ example-union-intersection.md](./example-union-intersection.md)
