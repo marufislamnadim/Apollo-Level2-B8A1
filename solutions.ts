@@ -42,15 +42,26 @@ const getPopularCourses = (array:Course[], minStudents:number):Course[] =>{
     for (let i = 0; i < array.length; i++){
         const currentCourse = array[i]; 
         if (currentCourse.students >=minStudents && currentCourse.isPublished){
-            popularCourses.push(currentCourse);
-        }
+                popularCourses.push(currentCourse);
+            }
     }
     return popularCourses;
 }
 
 
+const pluckValues =<T, K extends keyof T>(items: T[], key:K):T[K][]=>{
+    let result:T[K][] = [];
+
+    for(const item of items){
+        result.push(item[key])
+    }
+    console.log(result)
+    return result;
+}
+
+
 class Employee{
-    protected name:string;
+        protected name:string;
     private baseSalary:number;
     constructor(name:string, baseSalary:number){
         this.name=name;
@@ -84,3 +95,5 @@ const validateAgeAsync = async (age: number): Promise<string> => {
             throw new Error('Access Denied: Must be 18 or older');
         }   
 }
+
+
