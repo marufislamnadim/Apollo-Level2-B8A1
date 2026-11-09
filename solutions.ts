@@ -48,6 +48,32 @@ const getPopularCourses = (array:Course[], minStudents:number):Course[] =>{
     return popularCourses;
 }
 
+
+class Employee{
+    protected name:string;
+    private baseSalary:number;
+    constructor(name:string, baseSalary:number){
+        this.name=name;
+        this.baseSalary=baseSalary;
+    } 
+    getDetails():string{
+        return (`Employee: ${this.name}, Base Salary: ${this.baseSalary}`)
+    }
+    
+}
+class Manager extends Employee{
+    private department:string;
+    constructor(name: string, baseSalary: number, department: string){
+        super(name, baseSalary);
+        this.department = department;
+        this.name=name;
+    }
+    getRoleInfo():string{
+        return (`Manager of ${this.department}: ${this.name}`)
+    }
+}
+
+
 const validateAgeAsync = async (age: number): Promise<string> => {
     
         if(age >= 18){
